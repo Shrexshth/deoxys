@@ -1,0 +1,17 @@
+packages:
+  - 'packages/trueforge-core'
+  - 'packages/deoxys-cli'
+allowBuilds:
+  '@swc/core': true
+  esbuild: true
+  protobufjs: true
+minimumReleaseAgeExclude:
+  - '@ai-sdk/alibaba@2.0.37'
+  - '@ai-sdk/anthropic@4.0.44'
+  - '@ai-sdk/gateway@4.0.67'
+  - '@ai-sdk/google@4.0.53'
+  - '@ai-sdk/moonshotai@3.0.41'
+  - '@ai-sdk/openai-compatible@3.0.39'
+  - '@ai-sdk/openai@4.0.49'
+  - '@ai-sdk/provider-utils@5.0.32'
+  - ai@7.0.82

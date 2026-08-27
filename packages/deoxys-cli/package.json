@@ -1,0 +1,23 @@
+{
+"name": "@deoxys/cli",
+"version": "1.0.0",
+"description": "Headless CLI for the Deoxys Agent Engine",
+"main": "dist/index.js",
+"bin": {
+"deoxys": "./bin/deoxys.js"
+},
+"scripts": {
+"build": "tsc",
+"start": "ts-node src/cli.ts"
+},
+"dependencies": {
+"@truefoundry/trueforge-core": "workspace:*",
+"commander": "^11.0.0",
+"dotenv": "^16.3.1"
+},
+"devDependencies": {
+"typescript": "^5.0.0",
+"ts-node": "^10.9.1",
+"@types/node": "^20.0.0"
+}
+}
