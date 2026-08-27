@@ -1,32 +1,17 @@
 packages:
-  - packages/*
-
-minimumReleaseAge: 0
-trustLockfile: true
-confirmModulesPurge: false
+  - 'packages/trueforge-core'
+  - 'packages/deoxys-cli'
 allowBuilds:
-  '@openuidev/lang-core': true
-  '@parcel/watcher': true
   '@swc/core': true
-  better-sqlite3: false
   esbuild: true
-  # Fern-generated SDK tests (packages/trueforge-sdk) run msw's postinstall.
-  msw: true
   protobufjs: true
-
-# Silence peer mismatches between trueforge-ui peers and the versions we pin.
-peerDependencyRules:
-  allowedVersions:
-    '@truefoundry/assistant-ui-runtime': '0.1.18'
-
-# One Context module for assistant-ui (avoids "requires an AuiProvider").
-overrides:
-  '@assistant-ui/store': '0.2.21'
-  '@assistant-ui/core': '0.2.22'
-  '@assistant-ui/react': '0.14.27'
-  '@assistant-ui/tap': '0.9.5'
-  zustand: '^5.0.14'
-  # resolve@1.22.12 ships accidental .claude/ files that break installs under macOS sandbox.
-  resolve: '1.22.11'
-  # Rollup 4.63.0 OOMs the frontend Vite build (Monaco + compression plugin); stay on 4.62.x.
-  rollup: '4.62.2'
+minimumReleaseAgeExclude:
+  - '@ai-sdk/alibaba@2.0.37'
+  - '@ai-sdk/anthropic@4.0.44'
+  - '@ai-sdk/gateway@4.0.67'
+  - '@ai-sdk/google@4.0.53'
+  - '@ai-sdk/moonshotai@3.0.41'
+  - '@ai-sdk/openai-compatible@3.0.39'
+  - '@ai-sdk/openai@4.0.49'
+  - '@ai-sdk/provider-utils@5.0.32'
+  - ai@7.0.82
